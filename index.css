@@ -90,6 +90,49 @@ form { display: inline-block; width: 100%; max-width: 400px; min-width: 200px; }
 img:hover {
     opacity: 0.8;
 }
+/* Universal Selector */
+* { box-sizing: border-box; }
+
+/* Element Selector */
+footer { background-color: #f0f0f0; }
+
+/* Selector List */
+h1, h2, h3 { line-height: 1.2; }
+
+/* ID Selector */
+#attendance { background: #fafafa; }
+
+/* Class Selector */
+.hex-color { font-style: italic; }
+
+/* Attribute Selector */
+input[type="checkbox"] { accent-color: var(--accent-color); }
+
+/* Descendant Combinator */
+section#business ul li { list-style-type: square; }
+
+/* Child Combinator */
+nav > ul > li { margin-right: 1rem; }
+
+/* Adjacent Sibling Combinator */
+h2 + p { margin-top: 0; font-size: 0.9rem; }
+
+/* General Sibling Combinator */
+section#media img ~ h3 { margin-top: 1rem; color: #333; }
+
+/* Combining Two Selectors */
+h1.hex-color { text-transform: uppercase; }
+
+/* :has() Selector */
+section#media:has(img) { border: 4px solid #ccc; padding: 1rem; }
+
+/* Nested Selector */
+section#business {
+    @nest & > h2 {
+        color: darkblue;
+    }
+}
+
 /* Mobile Media Query*/
 @media (max-width: 600px) {
     section#agenda ol.flex-container {
